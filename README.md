@@ -9,6 +9,7 @@ A time tracking and project management plugin for Neovim.
 - Billing rate management with multiple currencies
 - Detailed time reports and billing history
 - CSV export for time reports
+- HTML export for professional reports
 - Beautiful and intuitive UI
 
 ## Installation
@@ -63,6 +64,7 @@ require('tick').setup({
 | `:TickHistory` | Show task history |
 | `:TickTimeReport` | Show time report |
 | `:TickExportCSV [filename]` | Export time report to CSV |
+| `:TickExportHTML` | Export time report to HTML |
 | `:TickDeleteProject <name>` | Delete a project |
 
 ## Keybindings
@@ -171,6 +173,7 @@ When the dashboard is open:
 
 ### Exporting Reports
 
+#### CSV Export
 1. Use `:TickExportCSV` command
 2. Enter date range (optional)
 3. Specify output filename
@@ -181,6 +184,21 @@ When the dashboard is open:
    - End time
    - Duration
    - Amount
+
+#### HTML Export
+1. Use `:TickExportHTML` command
+2. Enter date range (optional)
+3. Report opens in default browser
+4. HTML report includes:
+   - Project details and date range
+   - Detailed time entries table
+   - Summary section with totals
+   - Print-friendly styling
+   - Currency formatting
+5. Options:
+   - Save as HTML file
+   - Print to PDF
+   - Share with clients
 
 ## Data Storage
 

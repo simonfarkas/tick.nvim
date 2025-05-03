@@ -72,6 +72,10 @@ function M.create_commands()
     require("tick.ui").export_time_report_csv(opts.args)
   end, {nargs = "?"})
   
+  vim.api.nvim_create_user_command("TickExportHTML", function()
+    require("tick.ui").export_time_report_html()
+  end, {})
+  
   vim.api.nvim_create_user_command("TickDeleteProject", function(opts)
     require("tick.projects").delete_project(opts.args)
   end, {nargs = 1, complete = "custom,v:lua.require'tick.projects'.complete_projects"})
